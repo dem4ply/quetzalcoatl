@@ -3,7 +3,7 @@ from . import views
 
 router = routers.SimpleRouter()
 
-router.register( r'catalog', views.Catalog, base_name='catalog' )
+router.register( r'catalog', views.Catalog, basename='catalog' )
 
 
 urlpatterns = router.urls

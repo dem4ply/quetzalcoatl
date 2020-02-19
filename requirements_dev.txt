@@ -1,8 +1,8 @@
-Django==2.1.5
+Django==3.0.3
 Sphinx==1.8.1
-django-cors-headers==2.4.0
-django-extensions==2.1.5
-djangorestframework==3.9.1
+django-cors-headers==3.2.1
+django-extensions==2.2.8
+djangorestframework==3.11.0
 
 django-filter==2.1.0
 django-filters==0.2.1
@@ -45,3 +45,6 @@ ipython
 
 
 certifi
+
+
+django_rest_marshmallow==4.0.1
