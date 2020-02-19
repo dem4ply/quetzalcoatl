@@ -41,6 +41,13 @@ class Catalog( Document ):
             relative_count=relative_count )
         return pulse
 
+    def update_count( self, new_count=None ):
+        pulse = self.build_pulse( new_count )
+        self.count = new_count
+        self.save()
+        pulse.save()
+        return pulse
+
 
 class Catalog_pulse( Document ):
     catalog_id = field.Keyword()
@@ -58,7 +65,7 @@ class Catalog_pulse( Document ):
         date_detection = MetaField( False )
 
     def save( self, *args, **kw ):
-        if not getattr( self.meta, 'id', False ):
+        if not getattr( self.meta, 'id', False ) and not self.create_at:
             self.create_at = datetime.datetime.utcnow()
         self.update_at = datetime.datetime.utcnow()
         return super().save( *args, **kw )
