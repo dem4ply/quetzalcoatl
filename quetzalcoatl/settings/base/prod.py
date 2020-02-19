@@ -10,8 +10,11 @@ env = os.environ.get( 'QUETZALCOATL__ENVIRONMENT', 'local' ).lower()
 is_production = env == 'production'
 
 
+PROJECT_NAME = 'quetzalcoatl'
+
 SECRET_KEY = os.environ.get( 'QUETZALCOATL__SECRET_KEY', '' )
 DEBUG = not is_production
+TEST_MODE = True
 
 ALLOWED_HOSTS = [ '*' ]
 
