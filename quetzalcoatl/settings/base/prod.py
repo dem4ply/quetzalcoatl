@@ -14,7 +14,7 @@ PROJECT_NAME = 'quetzalcoatl'
 
 SECRET_KEY = os.environ.get( 'QUETZALCOATL__SECRET_KEY', '' )
 DEBUG = not is_production
-TEST_MODE = True
+TEST_MODE = bool( os.environ.get( 'QUETZALCOATL__TEST_MODE', False ) )
 
 ALLOWED_HOSTS = [ '*' ]
 

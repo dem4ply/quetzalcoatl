@@ -1,4 +1,4 @@
-modules = quetzalcoatl
+modules = quetzalcoatl, catalog
 
 style_test: flakes pep8
 
