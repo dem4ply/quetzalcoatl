@@ -6,21 +6,19 @@ djangorestframework==3.11.0
 
 django-filter==2.1.0
 django-filters==0.2.1
-#chibi_django==0.1.2
-#chibi==0.4.0.5
+chibi_django==0.2.1
+chibi==0.7.7
 django-mysql==2.4.1
 djangorestframework-xml==1.4.0
 djangorestframework-yaml==1.0.3
 drf-nested-routers==0.91
 dj-database-url==0.5.0
 CMRESHandler==1.0.0
-django-heroku==0.3.1
 elasticsearch_dsl==7.0.0
 djangorestframework-jwt==1.11.0
 
 celery==4.2.1
 
-#psycopg2==2.7.7
 mysqlclient==1.4.4
 
 gevent==1.4
