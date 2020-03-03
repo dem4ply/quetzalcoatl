@@ -46,3 +46,4 @@ certifi
 
 
 django_rest_marshmallow==4.0.1
+cryptography==2.8
