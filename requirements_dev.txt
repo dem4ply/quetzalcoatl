@@ -6,7 +6,7 @@ djangorestframework==3.11.0
 
 django-filter==2.1.0
 django-filters==0.2.1
-chibi_django==0.2.2
+chibi_django==0.2.3
 chibi==0.7.7
 django-mysql==2.4.1
 djangorestframework-xml==1.4.0
