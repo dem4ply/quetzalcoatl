@@ -3,6 +3,7 @@ import json
 from six.moves.urllib import request
 from cryptography.x509 import load_pem_x509_certificate
 from cryptography.hazmat.backends import default_backend
+from chibi.parser import to_bool
 
 
 env = os.environ.get( 'QUETZALCOATL__ENVIRONMENT', 'local' ).lower()
@@ -14,8 +15,7 @@ PROJECT_NAME = 'quetzalcoatl'
 
 SECRET_KEY = os.environ.get( 'QUETZALCOATL__SECRET_KEY', '' )
 DEBUG = not is_production
-TEST_MODE = bool( os.environ.get( 'QUETZALCOATL__TEST_MODE', False ) )
-
+TEST_MODE = to_bool( os.environ.get( 'QUETZALCOATL__TEST_MODE', False ) )
 ALLOWED_HOSTS = [ '*' ]
 
 ROOT_URLCONF = 'quetzalcoatl.urls'
