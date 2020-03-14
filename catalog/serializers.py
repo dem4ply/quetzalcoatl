@@ -6,7 +6,6 @@ from .models import (
 from chibi_django.serializers_fields import (
     parametrise_hyperlink_identity_field
 )
-from rest_marshmallow import Schema, fields as f
 from rest_framework import serializers
 
 

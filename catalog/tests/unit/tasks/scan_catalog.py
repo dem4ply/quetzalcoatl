@@ -28,15 +28,3 @@ class Test_scan_catalog( unittest.TestCase ):
             len( catalog_to_update.update_count.call_args_list ) )
         self.assertEqual( catalog_total, len( catalog_get.call_args_list ) )
 
-
-class test_update_catalog( unittest.TestCase ):
-    def test_should_work( self ):
-        catalog = Catalog.search()[:1].execute()[0]
-        catalog_id = catalog.meta.id
-        new_data = { 'count': catalog.count + 10 }
-        when = datetime.datetime.utcnow() - datetime.timedelta( days=1 )
-        update_catalog( catalog_id, new_data, when )
-        result = Catalog._index.flush()
-        catalog_v2 = Catalog.get( catalog_id )
-
-        self.assertEqual( catalog_v2.count, new_data[ 'count' ] )

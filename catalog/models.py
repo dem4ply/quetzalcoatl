@@ -36,6 +36,8 @@ class Catalog( Document ):
         relative_count = 0
         if new_count is not None:
             relative_count = new_count - self.count
+        else:
+            new_count = self.count
         pulse = Catalog_pulse(
             catalog_id=self.meta.id, count=new_count,
             relative_count=relative_count )

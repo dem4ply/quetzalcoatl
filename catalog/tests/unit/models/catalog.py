@@ -81,6 +81,10 @@ class Test_catalog_build_pulse( unittest.TestCase ):
         pulse = self.catalog.build_pulse()
         self.assertEqual( pulse.relative_count, 0 )
 
+    def test_default_should_have_the_same_count_that_catalog( self ):
+        pulse = self.catalog.build_pulse()
+        self.assertEqual( pulse.count, self.catalog.count )
+
     def test_should_add_the_relative_pulse_positive( self ):
         pulse = self.catalog.build_pulse( self.catalog.count + 10 )
         self.assertEqual( pulse.relative_count, 10 )
